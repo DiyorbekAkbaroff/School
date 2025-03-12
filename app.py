@@ -1,5 +1,10 @@
 from flask import Flask, render_template
 
+#Esizdan chiqmasin flaskni o'rnatishni unutmang
+#pip install flask
+#Agar python3 venv -venv kalida
+#source venv/bin/activate
+
 app = Flask(__name__)
 
 # Ma'lumotlar (O'quvchilar, O'qituvchilar va Ishchilar)
