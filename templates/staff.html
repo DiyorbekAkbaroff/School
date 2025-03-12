@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishchilar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">School Management</a>
+        </div>
+    </header>
+
+    <main>
+        <h1>Ishchilar</h1>
+        <ul class="list">
+            {% for staff_member in staff %}
+                <li>
+                    <a href="{{ url_for('staff_detail', staff_id=staff_member['id']) }}">{{ staff_member['name'] }} {{ staff_member['surname'] }}</a>
+                    <p>{{ staff_member['position'] }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>

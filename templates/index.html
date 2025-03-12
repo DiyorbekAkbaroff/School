@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">School Management</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('students_list') }}">O'quvchilar</a></li>
+                <li><a href="{{ url_for('teachers_list') }}">O'qituvchilar</a></li>
+                <li><a href="{{ url_for('staff_list') }}">Ishchilar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="welcome">
+            <h1>Welcome to Our School</h1>
+            <p>Here you can find information about students, teachers, and staff.</p>
+        </div>
+
+        <div class="section-buttons">
+            <a href="{{ url_for('students_list') }}" class="btn">View Students</a>
+            <a href="{{ url_for('teachers_list') }}" class="btn">View Teachers</a>
+            <a href="{{ url_for('staff_list') }}" class="btn">View Staff</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 School Management</p>
+    </footer>
+</body>
+</html>

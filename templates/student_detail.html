@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ student['name'] }} {{ student['surname'] }} - Detail</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">School Management</a>
+        </div>
+    </header>
+
+    <div class="detail-container">
+        <h2>{{ student['name'] }} {{ student['surname'] }}</h2>
+        <p>Age: {{ student['age'] }}</p>
+        <p>Class: {{ student['class'] }}</p>
+        <a href="tel:+998{{ student['phone'] }}" class="phone-btn">Telefon qilish</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 School Management</p>
+    </footer>
+</body>
+</html>

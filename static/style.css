@@ -1,0 +1,331 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header styles */
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    border-bottom: 4px solid #16a085;
+}
+
+header .logo a {
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ecf0f1;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+header .logo a:hover {
+    color: #16a085;
+    transform: scale(1.1);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #16a085;
+}
+
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #16a085;
+    transition: width 0.3s ease;
+    bottom: -5px;
+    left: 0;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Main Section */
+main {
+    padding: 40px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Section Buttons */
+.section-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.section-buttons .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #16a085;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section-buttons .btn:hover {
+    background-color: #1abc9c;
+    transform: translateY(-5px);
+}
+
+/* List Section */
+ul.list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+ul.list li {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul.list li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+ul.list li a {
+    font-size: 1.5rem;
+    color: #16a085;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+ul.list li a:hover {
+    color: #1abc9c;
+}
+
+ul.list li p {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+/* Phone call button style */
+.phone-btn {
+    display: inline-block;
+    background-color: #16a085;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.phone-btn:hover {
+    background-color: #1abc9c;
+    transform: translateY(-5px);
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #16a085;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1abc9c;
+    transform: translateY(-5px);
+}
+
+/* Detail pages styling */
+.detail-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.detail-container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.detail-container p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #7f8c8d;
+}
+
+.detail-container .phone-btn {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2c3e50;
+    padding: 30px 0;
+    color: #ecf0f1;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo a {
+        font-size: 26px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 20px 0;
+    }
+
+    .section-buttons {
+        flex-direction: column;
+    }
+
+    .section-buttons .btn {
+        width: 100%;
+        padding: 14px;
+        text-align: center;
+    }
+
+    .phone-btn {
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+    }
+}
+
+/* Modal (for details pages) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal .modal-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.modal .modal-content p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fancy loading animation for pages */
+@keyframes loading {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: loading 1s ease-in-out;
+}

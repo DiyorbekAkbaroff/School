@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'quvchilar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">School Management</a>
+        </div>
+    </header>
+
+    <main>
+        <h1>O'quvchilar</h1>
+        <ul class="list">
+            {% for student in students %}
+                <li>
+                    <a href="{{ url_for('student_detail', student_id=student['id']) }}">{{ student['name'] }} {{ student['surname'] }}</a>
+                    <p>{{ student['class'] }} sinf, {{ student['age'] }} yosh</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>
